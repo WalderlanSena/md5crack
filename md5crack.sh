@@ -9,9 +9,11 @@
 clear # Limpando a tela do terminal
 
 if [ $2 != '' ]; then
-  echo "@-----------------------------------------@"
-  echo "@--------------  Md5Crack  ---------------@"
-  echo "@----------------------------- v-0.0.1 ---@"
+  echo "@---------------------------------------------------@"
+  echo "@-------------------  Md5Crack  --------------------@"
+  echo "@--------------------------------------- v-0.0.1 ---@"
+  echo ""
+  echo "     Md5 Crack is a software to decrypt MD5 hash    "
   echo ""
 
   cat $2 | while read linha
@@ -30,10 +32,12 @@ if [ $2 != '' ]; then
     fi
   done
 else
-  clear
-  echo "@-----------------------------------------@"
-  echo "@--------------  Md5Crack  ---------------@"
-  echo "@----------------------------- v-0.0.1 ---@"
+  clear # Limpando a tela do terminal
+  echo "@---------------------------------------------------@"
+  echo "@-------------------  Md5Crack  --------------------@"
+  echo "@--------------------------------------- v-0.0.1 ---@"
+  echo ""
+  echo "     Md5 Crack is a software to decrypt MD5 hash    "
   echo ""
   echo "Example software: "
   echo ""
