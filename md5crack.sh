@@ -15,7 +15,7 @@ if [ $2 != '' ]; then
   echo ""
   echo "     Md5 Crack is a software to decrypt MD5 hash    "
   echo ""
-
+  cont=0
   cat $2 | while read linha
   do
     v=$linha
@@ -25,9 +25,10 @@ if [ $2 != '' ]; then
       echo "--------------------------------------"
       echo "| Md5 hash successfully decipher --> : " $v
       echo "--------------------------------------"
-      echo ""
+      echo "| Tested passwords: $cont"
       exit 1
     else
+      let cont=$cont+1;
       echo "$hash != $4 ($linha)"
     fi
   done
@@ -41,7 +42,7 @@ else
   echo ""
   echo "Example software: "
   echo ""
-  echo "./md5crack.sh -f /opt/wordlist.txt -h [hash]"
+  echo "use: ./md5crack.sh -f [wordlist] -h [hash]"
   echo ""
   echo "-f [FILE] : wordlist location passwords"
   echo "-h [HASH] : MD5 hash to be decrypted"
