@@ -8,7 +8,7 @@
 
 clear # Limpando a tela do terminal
 
-if [ $2 != '' ]; then
+if [ -f "$2" ]; then # Verifica se o arquivo existe e se não é um diretório
   echo "@---------------------------------------------------@"
   echo "@-------------------  Md5Crack  --------------------@"
   echo "@--------------------------------------- v-0.0.1 ---@"
@@ -30,7 +30,7 @@ if [ $2 != '' ]; then
     else
       let cont=$cont+1;
       vermelho="\033[0;31m"
-      echo -e "\033[1;32m$hash\033[0m != \033[1;32m$4\033[0m ($linha)"
+      echo -e "[ \033[31mFAILED\033[0m ] \033[1;32m$hash\033[0m != \033[1;32m$4\033[0m ($linha)"
     fi
   done
 else
