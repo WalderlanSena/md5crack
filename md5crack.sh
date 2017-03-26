@@ -6,13 +6,14 @@
 # Develop     : Walderlan Sena - <http://www.walderlan.xyz/about>
 # Site        : contato@walderlan.xyz
 # LINCENSE    : Lincense GPL <http://gnu.org/lincense/gpl.html>
+# TODO        : The script still does not check if the hash has been passed
 
 clear # Cleaning the terminal
 
 if [ -f "$2" ]; then # Checks whether the file exists and is not a directory
-  echo "@---------------------------------------------------@"
-  echo "@-------------------  Md5Crack  --------------------@"
-  echo "@--------------------------------------- v-0.0.1 ---@"
+  echo "\033[46;1;37m█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█"
+  echo "█                   » Md5Crack «                    █"
+  echo "█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ v-0.1.2 ▄▄▄█\033[0m"
   echo ""
   echo "     Md5 Crack is a software to decrypt MD5 hash    "
   echo ""
@@ -36,9 +37,9 @@ if [ -f "$2" ]; then # Checks whether the file exists and is not a directory
   done
 else
   clear # Cleaning the terminal
-  echo -e "\033[46;1;37m@---------------------------------------------------@"
-  echo  "@-------------------  Md5Crack  --------------------@"
-  echo -e "@--------------------------------------- v-0.0.1 ---@\033[0m"
+  echo -e "\033[46;1;37m█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█"
+  echo -e "█                   » Md5Crack «                    █"
+  echo -e "█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ v-0.1.2 ▄▄▄█\033[0m"
   echo ""
   echo "     Md5 Crack is a software to decrypt MD5 hash    "
   echo ""
