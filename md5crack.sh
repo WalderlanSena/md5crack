@@ -20,8 +20,8 @@ then # Checks whether the file exists and is not a directory, if the hash has be
   cont=0
   for line in $(cat $1); do    
     v=$line
-    hash="$(echo -n "$v" | md5sum | sed 's/ //g' | sed 's/-//g')";
-    if [ $hash = $2 ] 
+    hash="$(echo -n "$v" | md5sum | sed 's/ //g' | sed 's/-//g')"; # Encrypts and treats wordlist password
+    if [ $hash = $2 ] # Checks if password found
     then
       echo ""
       echo -e "\033[46;1;37m--------------------------------------\033[0m"
@@ -31,7 +31,7 @@ then # Checks whether the file exists and is not a directory, if the hash has be
       exit 1
     else
       let cont=$cont+1;
-      red="\033[0;31m"
+      # Shows the script flow in operation
       echo -e "[ \033[31mFAILED\033[0m ] \033[1;32m$hash\033[0m != \033[1;32m$2\033[0m ($line)"
     fi
   done
