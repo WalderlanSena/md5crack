@@ -1,6 +1,16 @@
 # :unlock: Md5crack
 Script to hash md5 decryption
 
+**Description** : Md5 crack is a script to decrypt MD5 hash form offline
+***
+**Use**         : ./md5crack.sh [wordlist] [hash]
+***
+**Develop**     : Walderlan Sena - [<http://www.walderlan.xyz/about>](http://www.walderlan.xyz/about)
+***
+**Email**       : [contato@walderlan.xyz](malito:contato@walderlan.xyz)
+***
+**LINCENSE**    : Lincense GPL [<http://gnu.org/lincense/gpl.html>](http://gnu.org/lincense/gpl.html)
+***
 ## Whats is MD5?
 
 **MD5** (Message Digest algorithm 5) is a 128-bit unidirectional cryptographic hash function (or cryptographic hash function) developed by RSA Data Security, Inc., described in RFC 1321, and widely used by point-to- Point **(P2P, or Peer-to-Peer)** checksum for file and log integrity.
