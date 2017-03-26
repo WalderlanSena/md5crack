@@ -1,14 +1,15 @@
 #!/bin/bash
 
-##################################################
-# -----------------  Md5Crack  ----------------- #
-# Develop: Walderlan Sena                        #
-# github.com/WalderlanSena - Project Open Source #
-##################################################
+# Md5Crack - Script to hash md5 decryption
+# Description : Md5 crack is a script to decrypt MD5 hash form offline 
+# Use         : ./md5crack.sh -f [wordlist] -h [hash]
+# Develop     : Walderlan Sena - <http://www.walderlan.xyz/about>
+# Site        : contato@walderlan.xyz
+# LINCENSE    : Lincense GPL <http://gnu.org/lincense/gpl.html>
 
-clear # Limpando a tela do terminal
+clear # Cleaning the terminal
 
-if [ -f "$2" ]; then # Verifica se o arquivo existe e se não é um diretório
+if [ -f "$2" ]; then # Checks whether the file exists and is not a directory
   echo "@---------------------------------------------------@"
   echo "@-------------------  Md5Crack  --------------------@"
   echo "@--------------------------------------- v-0.0.1 ---@"
@@ -16,11 +17,11 @@ if [ -f "$2" ]; then # Verifica se o arquivo existe e se não é um diretório
   echo "     Md5 Crack is a software to decrypt MD5 hash    "
   echo ""
   cont=0
-  cat $2 | while read linha
-  do
-    v=$linha
+  for line in $(cat $2); do    
+    v=$line
     hash="$(echo -n "$v" | md5sum | sed 's/ //g' | sed 's/-//g')";
-    if [ $hash = $4 ]; then
+    if [ $hash = $4 ] 
+    then
       echo ""
       echo -e "\033[46;1;37m--------------------------------------\033[0m"
       echo -e "\033[46;1;37m| Md5 hash successfully decipher --> :\033[0m " $v
@@ -29,12 +30,12 @@ if [ -f "$2" ]; then # Verifica se o arquivo existe e se não é um diretório
       exit 1
     else
       let cont=$cont+1;
-      vermelho="\033[0;31m"
-      echo -e "[ \033[31mFAILED\033[0m ] \033[1;32m$hash\033[0m != \033[1;32m$4\033[0m ($linha)"
+      red="\033[0;31m"
+      echo -e "[ \033[31mFAILED\033[0m ] \033[1;32m$hash\033[0m != \033[1;32m$4\033[0m ($line)"
     fi
   done
 else
-  clear # Limpando a tela do terminal
+  clear # Cleaning the terminal
   echo -e "\033[46;1;37m@---------------------------------------------------@"
   echo  "@-------------------  Md5Crack  --------------------@"
   echo -e "@--------------------------------------- v-0.0.1 ---@\033[0m"
