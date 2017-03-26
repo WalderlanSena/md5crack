@@ -3,8 +3,8 @@
 # Md5Crack - Script to hash md5 decryption
 # Description : Md5 crack is a script to decrypt MD5 hash form offline 
 # Use         : ./md5crack.sh [wordlist] [hash]
-# Develop     : Walderlan Sena - <http://www.walderlan.xyz/about>
-# Site        : contato@walderlan.xyz
+# Developer   : Walderlan Sena - <http://www.walderlan.xyz/about>
+# Email       : contato@walderlan.xyz
 # LINCENSE    : Lincense GPL <http://gnu.org/lincense/gpl.html>
 
 clear # Cleaning the terminal
